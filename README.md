@@ -56,3 +56,37 @@ The Three Hook Customization Areas:
 - What happens before/after trades
 - Trade validation and routing
 - Cross-protocol interactions
+
+### Hook
+
+#### Deploy and Verify Blockscout
+
+##### Unichain Sepolia
+
+```shell
+forge script script/00_Counter.s.sol:CounterScript \
+--private-key $devTestnetPrivateKey \
+--rpc-url https://sepolia.unichain.org \
+--broadcast 
+```
+
+#### Verify Blockscout Contract Already Deployed
+
+##### Unichain Sepolia
+
+Use the `contractAddress` from CREATE2 from
+
+```
+broadcast/00_Counter.s.sol/1301/run-latest.json
+```
+
+then run a script with that address
+
+```shell
+forge verify-contract \
+--rpc-url https://sepolia.unichain.org \
+<contract_address> \
+src/Counter.sol:Counter \
+--verifier blockscout \
+--verifier-url https://unichain-sepolia.blockscout.com/api/
+```
