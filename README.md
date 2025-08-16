@@ -7,7 +7,7 @@ The Problem:
 - Complex integrations with oracles and cross-chain
 
 Our Solution:
-** Visual, drag-and-drop hook builder that generates actual Solidity contract **
+**Visual, drag-and-drop hook builder that generates actual Solidity contract**
 
 # Executive Summary: Visual Hook Builder for Omnichain AMMs
 We are building a no-code, visual programming platform that democratizes the creation of sophisticated Uniswap v4 hooks by combining Chainlink's real-world data feeds with LayerZero's omnichain messaging capabilities. Our drag-and-drop interface allows users to design intelligent AMMs that adapt to market conditions across multiple blockchains—automatically adjusting fees based on Chainlink volatility data, coordinating liquidity strategies through LayerZero cross-chain communication, and implementing complex trading behaviors through visual decision trees. The platform then generates and deploys production-ready hook contracts to Unichain, transforming AMM development from a coding challenge into an accessible, visual design process that enables anyone to create market-responsive, omnichain-aware liquidity pools.
